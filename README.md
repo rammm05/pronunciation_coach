@@ -23,6 +23,21 @@ copy .env.example .env          # Windows   (Mac/Linux: cp .env.example .env)
 uvicorn main:app --reload
 ```
 
+## Environment Variables
+
+Create a `.env` file in the project root and add:
+
+```env
+# Get your API key at https://console.groq.com/keys
+GROQ_API_KEY=your_groq_api_key_here
+
+# Optional: change models
+WHISPER_MODEL=whisper-large-v3-turbo
+CHAT_MODEL=llama-3.3-70b-versatile
+```
+
+Replace `your_groq_api_key_here` with your actual Groq API key. Never upload your `.env` file to GitHub.
+
 Open **http://localhost:8000** in Chrome (the mic only works on localhost or https).
 
 ## How it works
